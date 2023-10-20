@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        body{
+            display: flex;
+            font-family: 'Courier New', Courier, monospace;
+            max-height: 100vh;
+            padding: 10%;
+            overflow: hidden;
+        }
+        .scrollable-text{
+            position: absolute;
+            
+            white-space: nowrap;
+            animation: scrollText 10s linear infinite;
+        }
+        .blinking-text{
+            margin: 100px;
+            
+            animation: blinkText 1s alternate infinite;
+        }
+        @keyframes scrollText{
+        0% {
+            transform :translateX(100%);
+            color: red;
+
+        }
+        100%{
+            transform: translateX(-100%); 
+            color: aliceblue;
+        }
+    }
+    @keyframes blinkText{
+        0%,100%{
+            opacity: 1;
+            color: green;
+        }
+        50%{
+            opacity: 0;
+            color: black;
+        }
+    }
+    </style>
+    <title>CSS Animation Demo</title>
+</head>
+<body>
+  <div class="scrollable-text">
+    <p>is a scrollable text that scrolls from left to right.</p>
+  </div>  
+  <div class="blinking-text">
+    <p>This is a blinking text that blinks at regular intervals.</p>
+    <p>Show result in a different line.</p>
+  </div>
+</body>
+</html>
